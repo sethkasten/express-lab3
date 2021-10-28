@@ -1,0 +1,34 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Schoolbell&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/style.css" />
+    <title>Add an Assignment</title>
+  </head>
+  <body>
+    <h1>Add an Assignment</h1>
+    <form action="/assignment-added" method="POST" class="assignment-form">
+      <label for="name">Assignment Name</label>
+      <input type="text" name="name" id="name" />
+      <label for="score">Your Score</label>
+      <input type="text" name="score" id="score" />
+      <label for="total">Total Possible Score</label>
+      <input type="text" name="total" id="total" />
+      <div>
+        <input type="checkbox" name="completed" id="completed" value="true" />
+        <label for="completed">Have you completed this assignment?</label>
+      </div>
+      <div>
+        <button>Add</button>
+        <a href="/">Never Mind</a>
+      </div>
+    </form>
+  </body>
+</html>

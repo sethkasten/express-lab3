@@ -1,0 +1,43 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Schoolbell&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/style.css" />
+    <title>Assignments</title>
+  </head>
+  <body>
+    <h1>Assignments</h1>
+    <table>
+      <tr>
+        <th>Assignment</th>
+        <th>Score</th>
+        <th>Total</th>
+        <th>Completed</th>
+        <th>Actions</th>
+      </tr>
+      {{#each assignmentsTableArray}}
+        <tr>
+          <td>{{name}}</td>
+          <td>{{score}}</td>
+          <td>{{total}}</td>
+          {{#if completed}}
+            <td>✔</td>
+          {{else}}
+            <td></td>
+          {{/if}}
+          <td><a href="/assignments/{{id}}/delete-confirmation">Delete</a></td>
+          <td><a href="/assignments/{{id}}/edit">Edit</a></td>
+        </tr>
+      {{/each}}
+    </table>
+    <p>Overall Average: {{average}}</p>
+    <p><a href="/add-assignment">Add an Assignment</a></p>
+  </body>
+</html>
